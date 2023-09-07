@@ -6,16 +6,19 @@ public class Ad {
     private String title;
     private String description;
 
-    public Ad(long id, long userId, String title, String description) {
+    private String category;
+
+    public Ad(long id, long userId, String title, String category, String description) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
     }
 
-    public Ad(long userId, String title, String description) {
+    public Ad(long userId, String title, String category, String description) {
         this.userId = userId;
         this.title = title;
+        this.category = category;
         this.description = description;
     }
 
@@ -50,4 +53,6 @@ public class Ad {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public String getCategory() { return category; }
 }

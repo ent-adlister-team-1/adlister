@@ -17,6 +17,16 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
+            <div class="form-group">
+                <label for="category">Pick a category:</label>
+                <select name="category_id" id="category">
+                    <option value="1">Exotic Pets</option>
+                    <option value="2">Antique Artifacts</option>
+                    <option value="3">Cybersecurity Tools</option>
+                    <option value="4">Unusual Artwork</option>
+                    <option value="5">Forbidden Literature</option>
+                </select>
+            </div>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>

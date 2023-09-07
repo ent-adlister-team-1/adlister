@@ -16,9 +16,14 @@
             <aside>Email: ${sessionScope.user.email}</aside>
             </div>
         </div>
+        <br>
         <div id="user-ads">
             <h3>Your Ads:</h3>
             <div></div>
+        </div>
+        <br>
+        <div>
+            <a href="ads/create"><button>Create an ad</button></a>
         </div>
     </div>
 
