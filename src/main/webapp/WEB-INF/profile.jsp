@@ -10,6 +10,16 @@
 
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
+        <div id="user-info">
+            <div class="card">
+            <aside>Username: ${sessionScope.user.username}</aside>
+            <aside>Email: ${sessionScope.user.email}</aside>
+            </div>
+        </div>
+        <div id="user-ads">
+            <h3>Your Ads:</h3>
+            <div></div>
+        </div>
     </div>
 
 </body>
