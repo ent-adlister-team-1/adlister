@@ -33,6 +33,13 @@ CREATE TABLE ads (
                      FOREIGN KEY (category_id) REFERENCES category(id) ON DELETE CASCADE
 );
 
+INSERT INTO users (id, username, email, password)
+VALUES
+    (1,'ShadowCipher','shadowcipher@example.com','$2a$12$VkK/eu7qsFtdg3mCSguF.etHDCG9W6pbVumFrclHiH8ON5l0BEHU6'),
+    (2,'CrypticPhantom','crypticphantom@example.com','$2a$12$LWPA.rRuT4RJWWs25U05EOOxELUsaxLRMsuQSI4XB/sOivn.gdhfi'),
+    (3,'ObsidianGhost','obsidianghost@example.com','$2a$12$3MnUXTpQ6NSaEmyz6b0Uju/dTy4qPf6h5XlCDiuZJVOL/7EMOxgqi'),
+    (4,'NightshadeLurker','nightshadelurker@example.com','$2a$12$AUE/8/7V/B2TjpI6V3eJtu5O3CL/9NdqgkrdILZ19gunICkFTOga6'),
+    (5,'AbyssalWatcher','abyssalwatcher@example.com', '$2a$12$nrBW43WZirgkesgA/jp8BuE28VRDVjGAjF0nPQ9vvRvTC7DxqCfWy');
 
 
 INSERT INTO category (category)
