@@ -1,3 +1,4 @@
+CREATE DATABASE jeremysangels_adlister_db;
 USE jeremysangels_adlister_db;
 
 DROP TABLE IF EXISTS ads;
