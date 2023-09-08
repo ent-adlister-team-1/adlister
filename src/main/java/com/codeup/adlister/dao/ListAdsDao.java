@@ -29,13 +29,15 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
+  search_ads_form
     public void deleteAd(Ad ad) {
-
+    
     }
 
     @Override
     public Ad searchForAdById(String id) {
         return null;
+      main
     }
 
     private List<Ad> generateAds() {

@@ -7,10 +7,12 @@ import java.util.List;
 public interface Ads {
     // get a list of all the ads
     List<Ad> all();
+
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
 
+search_ads_form
     void deleteAd(Ad ad);
-
-    Ad searchForAdById(String id);
-}
+  Ad searchForAdById(String id);
+main
+  }

@@ -19,6 +19,10 @@ public class Ad {
         this.description = description;
     }
 
+    public Ad() {
+
+    }
+
     public long getId() {
         return id;
     }
@@ -49,5 +53,8 @@ public class Ad {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setCategory_id(String title) {
     }
 }
