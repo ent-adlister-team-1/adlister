@@ -12,12 +12,14 @@
 <div class="container">
     <h1>Here Are all the ads!</h1>
 
+    <form action = "/delete" method = "POST">
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
         </div>
     </c:forEach>
+    </form>
 </div>
 
 </body>
