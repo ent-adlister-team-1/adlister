@@ -29,7 +29,6 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
-  search_ads_form
     public void deleteAd(Ad ad) {
     
     }
@@ -37,7 +36,6 @@ public class ListAdsDao implements Ads {
     @Override
     public Ad searchForAdById(String id) {
         return null;
-      main
     }
 
     private List<Ad> generateAds() {
