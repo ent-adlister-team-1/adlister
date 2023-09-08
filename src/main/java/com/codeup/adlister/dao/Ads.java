@@ -11,7 +11,8 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
 
-    long deleteAd(Ad ad);
-
-
-}
+search_ads_form
+    void deleteAd(Ad ad);
+  Ad searchForAdById(String id);
+main
+  }
