@@ -83,14 +83,21 @@ public class MySQLAdsDao implements Ads {
             stmt.setLong(1, ad.getId());
             System.out.println(ad.getId());
             stmt.executeUpdate();
-//            ResultSet rs = stmt.getGeneratedKeys();
-//            rs.next();
-//            return rs.getLong(1);
         } catch (SQLException e) {
             throw new RuntimeException("Error deleting ad.", e);
         }
     }
-
+    public void updateAd(String id) {
+//        try {
+//            String updateQuery = "UPDATE ads SET WHERE id = ?;";
+//            PreparedStatement stmt = connection.prepareStatement(updateQuery, Statement.RETURN_GENERATED_KEYS);
+//            stmt.setLong(1, id.getId());
+//            System.out.println(ad.getId());
+//            stmt.executeUpdate();
+//        } catch (SQLException e) {
+//            throw new RuntimeException("Error deleting ad.", e);
+//        }
+    }
 
     public Ad searchForAdById(String id) {
         String query = "SELECT * FROM ads WHERE id = ? LIMIT 1;";

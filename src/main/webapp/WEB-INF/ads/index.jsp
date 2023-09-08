@@ -16,9 +16,15 @@
         <div class="col-md-6" data-id="${ad.id}">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
+            <div>
             <form action="ads/delete?id=${ad.id}" method="POST">
                 <button>Delete</button>
             </form>
+<%--            <form action="ads/update?id=${ad.id}">--%>
+<%--                <button>Update</button>--%>
+<%--            </form>--%>
+                <a href="ads/update?id=${ad.id}">Update</a>
+            </div>
         </div>
     </c:forEach>
 </div>
