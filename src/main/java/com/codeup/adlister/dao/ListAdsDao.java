@@ -5,6 +5,7 @@ import com.codeup.adlister.models.Ad;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class ListAdsDao implements Ads {
     private List<Ad> ads;
 
@@ -25,6 +26,16 @@ public class ListAdsDao implements Ads {
         ad.setId((long) ads.size());
         ads.add(ad);
         return ad.getId();
+    }
+
+    @Override
+    public void deleteAd(Ad ad) {
+
+    }
+
+    @Override
+    public Ad searchForAdById(String id) {
+        return null;
     }
 
     private List<Ad> generateAds() {
