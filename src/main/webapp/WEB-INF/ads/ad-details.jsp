@@ -7,13 +7,13 @@
 </head>
 <body>
 
-<tr>
-    <td>${ad.title}</td>
-    <%--        <td>${ad.price}</td>--%>
-    <td>${ad.description}</td>
-    <%--        <td>${ad.contact}</td>--%>
-    <%--        <td>${ad.location}</td>--%>
-</tr>
+<div class="add-container">
+    <div class="title">${ad.title}</div>
+<%--    <div class="location">${ad.location}</div>--%>
+    <div class="description">${ad.description}</div>
+<%--    <div class="price">${ad.price}</div>--%>
+<%--    <div class="contact">${ad.contact}</div>--%>
+</div>
 
 </body>
 </html>
