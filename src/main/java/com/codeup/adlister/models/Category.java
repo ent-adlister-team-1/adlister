@@ -1,5 +1,7 @@
 package com.codeup.adlister.models;
 
+import com.codeup.adlister.dao.Categories;
+
 public class Category {
 
     private long id;
