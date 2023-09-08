@@ -11,6 +11,18 @@
 
 <div class="container">
     <h1>Here Are all the ads!</h1>
+    <form action="SearchServlet" method="post">
+    <select name="searchTerm">
+        <option value="#"></option>
+        <option value="All">All</option>
+        <option value="Exotic Pets">Exotic Pets</option>
+        <option value="Antique Artifacts">Antique Artifacts</option>
+        <option value="Cybersecurity Tools">Cybersecurity Tools</option>
+        <option value="Unusual Artwork">Unusual Artwork</option>
+        <option value="Forbidden Literature">Forbidden Literature</option>
+    </select>
+    <input type="submit" value="Search">
+</form>
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6" data-id="${ad.id}">

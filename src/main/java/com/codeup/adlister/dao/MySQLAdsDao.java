@@ -1,11 +1,8 @@
 package com.codeup.adlister.dao;
 
-import com.codeup.adlister.Config;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
-
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +12,6 @@ import java.util.List;
 
 public class MySQLAdsDao implements Ads {
     private Connection connection = null;
-
     public MySQLAdsDao(
             Config config) {
         try {
@@ -76,7 +72,9 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
+
     public void deleteAd(Ad ad) {
+main
         try {
             String deleteQuery = "DELETE FROM ads WHERE id = ?;";
             PreparedStatement stmt = connection.prepareStatement(deleteQuery, Statement.RETURN_GENERATED_KEYS);
