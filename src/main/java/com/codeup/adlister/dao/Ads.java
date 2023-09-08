@@ -20,4 +20,4 @@ public interface Ads {
 
     void updateAd(String id);
 
-  } main
+  }
