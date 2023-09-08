@@ -1,7 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.User;
-
+import com.mysql.cj.jdbc.Driver;
 
 
 import java.sql.*;
@@ -13,42 +13,7 @@ public class MySQLUsersDao implements Users {
 
     public MySQLUsersDao(Config config) {
         try {
-            DriverManager.registerDriver(new Driver() {
-                @Override
-                public Connection connect(String url, Properties info) throws SQLException {
-                    return null;
-                }
-
-                @Override
-                public boolean acceptsURL(String url) throws SQLException {
-                    return false;
-                }
-
-                @Override
-                public DriverPropertyInfo[] getPropertyInfo(String url, Properties info) throws SQLException {
-                    return new DriverPropertyInfo[0];
-                }
-
-                @Override
-                public int getMajorVersion() {
-                    return 0;
-                }
-
-                @Override
-                public int getMinorVersion() {
-                    return 0;
-                }
-
-                @Override
-                public boolean jdbcCompliant() {
-                    return false;
-                }
-
-                @Override
-                public Logger getParentLogger() throws SQLFeatureNotSupportedException {
-                    return null;
-                }
-            });
+            DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
                 config.getUrl(),
                 config.getUser(),

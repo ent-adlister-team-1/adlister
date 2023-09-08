@@ -14,8 +14,8 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
-<%--            <a href="ad-details.jsp?id=${ad.id}">${ad.title}</a>--%>
-            <h2>${ad.title}</h2>
+            <a href="ad-details.jsp?id=${ad.id}">${ad.title}</a>
+<%--            <h2>${ad.title}</h2>--%>
             <p>${ad.description}</p>
             <form action="ads/delete?id=${ad.id}" method="POST">
                 <button>Delete</button>
