@@ -17,7 +17,7 @@ public class AdDetailServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String adId = request.getParameter("id");
-
+        System.out.println(adId);
         Ad ad = DaoFactory.getAdsDao().searchForAdById(adId);
 
         request.setAttribute("ad", ad);

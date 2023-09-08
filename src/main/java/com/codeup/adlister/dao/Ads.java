@@ -13,11 +13,10 @@ public interface Ads {
 
 
     void deleteAd(Ad ad);
-  Ad searchForAdById(String id);
 
-
+    Ad searchForAdById(String id);
 
 
     void updateAd(String id);
 
-  }
+}
