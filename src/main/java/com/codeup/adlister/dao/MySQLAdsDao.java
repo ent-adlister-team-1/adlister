@@ -74,7 +74,7 @@ public class MySQLAdsDao implements Ads {
 
 
     public void deleteAd(Ad ad) {
-main
+
         try {
             String deleteQuery = "DELETE FROM ads WHERE id = ?;";
             PreparedStatement stmt = connection.prepareStatement(deleteQuery, Statement.RETURN_GENERATED_KEYS);
