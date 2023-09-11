@@ -12,7 +12,8 @@
     <title>Title</title>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
+<%--<jsp:include page="/WEB-INF/partials/navbar.jsp"/>--%>
+<jsp:include page="/WEB-INF/partials/login-only-navbar.jsp" />
 
 <%--<form action="/logout" method="POST">--%>
 

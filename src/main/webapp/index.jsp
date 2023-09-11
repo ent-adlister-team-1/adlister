@@ -7,7 +7,8 @@
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+
+<jsp:include page="/WEB-INF/partials/login-only-navbar.jsp"/>
     <div class="container">
         <h1>Welcome to Shadow Trade!</h1>
         <h4>For all your dark (web) needs....</h4>
