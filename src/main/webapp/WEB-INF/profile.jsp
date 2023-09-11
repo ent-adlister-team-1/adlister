@@ -21,7 +21,11 @@
         <div id="user-ads">
             <h3>Your Ads:</h3>
             <div>
-
+                <c:forEach var="ad" items="${ads}">
+                    <div class="card">
+                        <a href="ad-details.jsp?id=${ad.id}">${ad.title}</a>
+                    </div>
+                </c:forEach>
             </div>
         </div>
         <br>

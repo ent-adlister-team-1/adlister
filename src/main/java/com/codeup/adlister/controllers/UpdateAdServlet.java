@@ -15,21 +15,31 @@ import java.io.IOException;
 public class UpdateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
-            String id = request.getParameter("id");
-            System.out.println(id);
-            Ad ad = DaoFactory.getAdsDao().searchForAdById(id);
-            request.setAttribute("ad", ad);
-            request.getRequestDispatcher("/WEB-INF/ads/update.jsp").forward(request, response);
+            response.sendRedirect("/login");
             return;
         }
+        String id = request.getParameter("id");
+        Ad ad = DaoFactory.getAdsDao().searchForAdById(id);
+        request.setAttribute("ad", ad);
+        request.getRequestDispatcher("/WEB-INF/ads/update.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        System.out.println("inside do");
         String id = request.getParameter("id");
+        System.out.println("id is: " + id);
         Ad ad = DaoFactory.getAdsDao().searchForAdById(id);
-        System.out.println(id);
-       request.setAttribute("ad", ad);
-//        response.sendRedirect("/update");
+        ad.setTitle(request.getParameter("title"));
+        ad.setPrice(Double.parseDouble(request.getParameter("price")));
+        ad.setDescription(request.getParameter("description"));
+        ad.setContact(request.getParameter("contact"));
+        ad.setLocation(request.getParameter("location"));
+        System.out.println("Ad sent to DAO:");
+        System.out.println(ad);
+//        request.setAttribute("ad", ad);
+        DaoFactory.getAdsDao().updateAd(ad);
+        response.sendRedirect("/ads");
+
 
     }
 }
