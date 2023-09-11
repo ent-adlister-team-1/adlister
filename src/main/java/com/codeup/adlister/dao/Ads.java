@@ -17,6 +17,6 @@ public interface Ads {
     Ad searchForAdById(String id);
 
 
-    void updateAd(String id);
+    void updateAd(Ad ad);
 
 }

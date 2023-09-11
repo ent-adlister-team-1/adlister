@@ -98,16 +98,24 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error deleting ad.", e);
         }
     }
-    public void updateAd(String id) {
-//        try {
-//            String updateQuery = "UPDATE ads SET WHERE id = ?;";
-//            PreparedStatement stmt = connection.prepareStatement(updateQuery, Statement.RETURN_GENERATED_KEYS);
-//            stmt.setLong(1, id.getId());
-//            System.out.println(ad.getId());
-//            stmt.executeUpdate();
-//        } catch (SQLException e) {
-//            throw new RuntimeException("Error deleting ad.", e);
-//        }
+    public void updateAd(Ad ad) {
+        System.out.println("Ad received by DAO:");
+        System.out.println(ad);
+        try {
+            String updateQuery = "UPDATE ads SET title = ?, description = ?, contact = ?, location = ?, price = ?, category = ?" +
+                    "WHERE id = ?;";
+            PreparedStatement stmt = connection.prepareStatement(updateQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, ad.getTitle());
+            stmt.setString(2, ad.getDescription());
+            stmt.setString(3, ad.getContact());
+            stmt.setString(4, ad.getLocation());
+            stmt.setFloat(5, (float) ad.getPrice());
+            stmt.setString(6, ad.getCategory());
+            stmt.setLong(7, ad.getId());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating ad.", e);
+        }
     }
 
     public Ad searchForAdById(String id) {
@@ -115,6 +123,7 @@ public class MySQLAdsDao implements Ads {
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, id);
+            System.out.println(id);
             ResultSet rs = stmt.executeQuery();
             rs.next();
             return extractAd(rs);
