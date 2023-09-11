@@ -22,7 +22,7 @@ CREATE TABLE category (
 CREATE TABLE ads (
                      id INT UNSIGNED NOT NULL AUTO_INCREMENT,
                      user_id INT UNSIGNED NOT NULL,
-                     category_id INT UNSIGNED NOT NULL DEFAULT '1',
+                     category_id INT UNSIGNED NOT NULL,
                      title VARCHAR(240) NOT NULL,
                      price DECIMAL(10, 2),
                      description TEXT NOT NULL,

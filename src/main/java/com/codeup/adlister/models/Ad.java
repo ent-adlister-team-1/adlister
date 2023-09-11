@@ -30,6 +30,7 @@ public class Ad {
 //    public Ad(long id, String title, String categoryId, String description) {
 //    }
 
+
     public Ad(long id, long userId, String title, String description, String contact, String location, String category, long categoryId, double price) {
         this.id = id;
         this.userId = userId;
@@ -50,5 +51,21 @@ public class Ad {
         this.location = location;
         this.category = category;
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Ad{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", contact='" + contact + '\'' +
+                ", location='" + location + '\'' +
+                ", category='" + category + '\'' +
+                ", category_id=" + category_id +
+                ", price=" + price +
+//              ±
+                '}';
     }
 }

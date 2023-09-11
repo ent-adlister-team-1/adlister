@@ -18,47 +18,46 @@ public class MySQLCategoriesDao implements Categories {
         }
     }
 
-    private Category extractCategory(ResultSet rs) throws SQLException {
+    private String extractCategory(ResultSet rs) throws SQLException {
         if (!rs.next()) {
             return null;
         }
-        return new Category(
-                rs.getString("category")
-
-        );
+        return rs.getString("category");
     }
 
-    private Category extractCategoryId(ResultSet rs) throws SQLException {
+    private long extractCategoryId(ResultSet rs) throws SQLException {
         if (!rs.next()) {
-            return null;
+            return -1;
         }
-        return new Category(
-                rs.getString("id")
+        return rs.getLong("id");
 
-        );
     }
 
     public long getIdByCategory(String category) {
         String query = "SELECT * FROM category WHERE category = ? LIMIT 1";
         try {
-            Category newCategory;
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, category);
-            newCategory = extractCategory(stmt.executeQuery());
-            return newCategory.getId();
+            long catId = extractCategoryId(stmt.executeQuery());
+            return catId;
         } catch (SQLException e) {
             throw new RuntimeException("Error finding a user by username", e);
         }
     }
 
+    public static void main(String[] args) {
+        MySQLCategoriesDao categoriesDao = new MySQLCategoriesDao(new Config());
+        long categoryId = categoriesDao.getIdByCategory("Antique Artifacts");
+        System.out.println(categoryId);
+    }
     public String getCategoryById(String category_id) {
         String query = "SELECT * FROM category WHERE id = ? LIMIT 1";
-        Category category;
+        String category;
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, category_id);
             category = extractCategory(stmt.executeQuery());
-            return category.getName();
+            return category;
         } catch (SQLException e) {
             throw new RuntimeException("Error finding a user by username", e);
         }
