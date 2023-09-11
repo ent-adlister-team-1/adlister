@@ -27,6 +27,18 @@
                     <option value="5">Forbidden Literature</option>
                 </select>
             </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input id="location" name="location" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact</label>
+                <input id="contact" name="contact" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input id="price" name="price" class="form-control" type="text">
+            </div>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>
