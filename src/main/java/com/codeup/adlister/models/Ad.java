@@ -1,5 +1,7 @@
 package com.codeup.adlister.models;
 
+import com.codeup.adlister.dao.DaoFactory;
+
 public class Ad {
     private long id;
     private long userId;
@@ -10,8 +12,12 @@ public class Ad {
 
     private String location;
 
+    private String category;
+
+    private long category_id;
+
     private double price;
-    private Category category;
+    private Category newCategory = new Category();
 
     public Ad(long id, String title, String categoryId, String description) {
     }
@@ -40,11 +46,11 @@ public class Ad {
         this.price = price;
     }
 
-    public Category getCategory() {
-        return category;
+    public String getCategory() {
+        return this.category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
@@ -61,7 +67,15 @@ public class Ad {
         this.description = description;
     }
 
-    public Ad(long userId, String title, String description, String contact, String location, double price, Category category) {
+    public Ad(long userId, String category, String title, String description) {
+        this.userId = userId;
+        this.category = category;
+
+        this.title = title;
+        this.description = description;
+    }
+    public Ad(long userId, String title, String description, String contact, String location, double price, String category) {
+
         this.userId = userId;
         this.title = title;
         this.description = description;
@@ -69,6 +83,7 @@ public class Ad {
         this.location = location;
         this.price = price;
         this.category = category;
+        this.category_id = DaoFactory.getCategoriesDao().getIdByCategory(category);
     }
 
     public Ad() {
