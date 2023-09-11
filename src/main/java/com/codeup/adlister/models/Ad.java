@@ -13,6 +13,9 @@ public class Ad {
     private double price;
     private Category category;
 
+    public Ad(long id, String title, String categoryId, String description) {
+    }
+
     public String getContact() {
         return contact;
     }
