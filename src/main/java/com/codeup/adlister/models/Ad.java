@@ -6,20 +6,70 @@ public class Ad {
     private String title;
     private String description;
 
-    private String category;
+    private String contact;
 
-    public Ad(long id, long userId, String title, String category, String description) {
+    private String location;
+
+    private double price;
+    private Category category;
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public Ad(long id, long userId, String title, String description) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
     }
 
-    public Ad(long userId, String title, String category, String description) {
+    public Ad(long userId, String title, String description) {
         this.userId = userId;
         this.title = title;
-        this.category = category;
         this.description = description;
+    }
+
+    public Ad(long userId, String title, String description, String contact, String location, double price, Category category) {
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.contact = contact;
+        this.location = location;
+        this.price = price;
+        this.category = category;
+    }
+
+    public Ad() {
+
     }
 
     public long getId() {
@@ -54,5 +104,6 @@ public class Ad {
         this.description = description;
     }
 
-    public String getCategory() { return category; }
+    public void setCategory_id(String title) {
+    }
 }
