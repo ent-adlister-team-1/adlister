@@ -47,6 +47,14 @@ public class Ad {
         return this.category;
     }
 
+    public long getCategory_id() {
+        return category_id;
+    }
+
+    public void setCategory_id(long category_id) {
+        this.category_id = category_id;
+    }
+
     public void setCategory(String category) {
         this.category = category;
     }
@@ -120,5 +128,21 @@ public class Ad {
     }
 
     public void setCategory_id(String title) {
+    }
+
+    @Override
+    public String toString() {
+        return "Ad{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", contact='" + contact + '\'' +
+                ", location='" + location + '\'' +
+                ", category='" + category + '\'' +
+                ", category_id=" + category_id +
+                ", price=" + price +
+//              ±
+                '}';
     }
 }

@@ -38,6 +38,8 @@ public class CreateAdServlet extends HttpServlet {
             Double.parseDouble(request.getParameter("price")),
             category
         );
+
+        System.out.println(ad);
         DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/ads");
     }
