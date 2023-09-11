@@ -6,7 +6,8 @@
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<%--    <jsp:include page="/WEB-INF/partials/navbar.jsp" />--%>
+    <jsp:include page="/WEB-INF/partials/login-only-navbar.jsp" />
     <div class="container">
         <h1>Please Log In</h1>
         <form action="/login" method="POST">
@@ -23,6 +24,14 @@
         <div class="register redirect">
             <a href="register">Not a User? Sign up here!</a>
         </div>
+        <!--  error message -->
+        <% String errorMessage = (String) request.getAttribute("errorMessage");
+            if (errorMessage != null) { %>
+        <div id="error-message" style="color: red;">
+            <%= errorMessage %>
+        </div>
+        <% } %>
+
     </div>
 </body>
 </html>
