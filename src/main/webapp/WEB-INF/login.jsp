@@ -23,6 +23,14 @@
         <div class="register redirect">
             <a href="register">Not a User? Sign up here!</a>
         </div>
+        <!--  error message -->
+        <% String errorMessage = (String) request.getAttribute("errorMessage");
+            if (errorMessage != null) { %>
+        <div id="error-message" style="color: red;">
+            <%= errorMessage %>
+        </div>
+        <% } %>
+
     </div>
 </body>
 </html>
