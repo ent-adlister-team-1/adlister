@@ -20,7 +20,9 @@
         <br>
         <div id="user-ads">
             <h3>Your Ads:</h3>
-            <div></div>
+            <div>
+
+            </div>
         </div>
         <br>
         <div>
