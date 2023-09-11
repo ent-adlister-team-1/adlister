@@ -44,28 +44,29 @@ public class Ad {
     }
 
     public Ad(long id, String title, String description, String contact, String location, double price, String category) {
-        this.userId = userId;
+        this.userId = id;
         this.title = title;
         this.description = description;
         this.contact = contact;
         this.location = location;
         this.category = category;
         this.price = price;
+        this.category_id = DaoFactory.getCategoriesDao().getIdByCategory(category);
     }
 
-    @Override
-    public String toString() {
-        return "Ad{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", contact='" + contact + '\'' +
-                ", location='" + location + '\'' +
-                ", category='" + category + '\'' +
-                ", category_id=" + category_id +
-                ", price=" + price +
-//              ±
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Ad{" +
+//                "id=" + id +
+//                ", userId=" + userId +
+//                ", title='" + title + '\'' +
+//                ", description='" + description + '\'' +
+//                ", contact='" + contact + '\'' +
+//                ", location='" + location + '\'' +
+//                ", category='" + category + '\'' +
+//                ", category_id=" + category_id +
+//                ", price=" + price +
+////              ±
+//                '}';
+//    }
 }
