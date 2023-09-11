@@ -34,7 +34,7 @@
                 <form action="ads/delete?id=${ad.id}" method="POST">
                     <button>Delete</button>
                 </form>
-                <a href="ads/update?id=${ad.id}">Update</a>
+                <a href="ads/update?id=${ad.id}"><button>Update</button></a>
             </div>
         </div>
     </c:forEach>
