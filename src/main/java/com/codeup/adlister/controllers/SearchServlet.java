@@ -65,7 +65,7 @@ public class SearchServlet extends HttpServlet {
                         Ad ad = new Ad();
                         ad.setId(resultSet.getLong("id"));
                         ad.setTitle(resultSet.getString("title"));
-                        ad.setCategory_id(resultSet.getString("category"));
+                        ad.setCategory_id(resultSet.getLong("category"));
                         ad.setTitle(resultSet.getString("title"));
                         ad.setDescription(resultSet.getString("description"));
 
