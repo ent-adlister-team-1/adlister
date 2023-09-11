@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
@@ -24,6 +25,12 @@
                 <c:forEach var="ad" items="${ads}">
                     <div class="card">
                         <a href="ad-details.jsp?id=${ad.id}">${ad.title}</a>
+                    </div>
+                    <div>
+                        <form action="ads/delete?id=${ad.id}" method="POST">
+                            <button>Delete</button>
+                        </form>
+                        <a href="ads/update?id=${ad.id}"><button>Update</button></a>
                     </div>
                 </c:forEach>
             </div>
