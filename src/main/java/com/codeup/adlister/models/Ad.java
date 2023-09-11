@@ -54,19 +54,19 @@ public class Ad {
         this.category_id = DaoFactory.getCategoriesDao().getIdByCategory(category);
     }
 
-//    @Override
-//    public String toString() {
-//        return "Ad{" +
-//                "id=" + id +
-//                ", userId=" + userId +
-//                ", title='" + title + '\'' +
-//                ", description='" + description + '\'' +
-//                ", contact='" + contact + '\'' +
-//                ", location='" + location + '\'' +
-//                ", category='" + category + '\'' +
-//                ", category_id=" + category_id +
-//                ", price=" + price +
-////              ±
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Ad{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", contact='" + contact + '\'' +
+                ", location='" + location + '\'' +
+                ", category='" + category + '\'' +
+                ", category_id=" + category_id +
+                ", price=" + price +
+//              ±
+                '}';
+    }
 }
