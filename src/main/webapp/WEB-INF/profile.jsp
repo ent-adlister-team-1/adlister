@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
@@ -25,6 +26,7 @@
                 <c:forEach var="ad" items="${ads}">
                     <div class="card">
                         <a href="ad-details.jsp?id=${ad.id}">${ad.title}</a>
+                        <p>${ad.description}</p>
                     </div>
                     <div>
                         <form action="ads/delete?id=${ad.id}" method="POST">
