@@ -20,6 +20,10 @@ public class AdDetailServlet extends HttpServlet {
         System.out.println(adId);
         Ad ad = DaoFactory.getAdsDao().searchForAdById(adId);
 
+        System.out.println("title" + ad.getTitle());
+        System.out.println("price" + ad.getPrice());
+        System.out.println("location" + ad.getLocation());
+
         request.setAttribute("ad", ad);
 
         request.getRequestDispatcher("/WEB-INF/ads/ad-details.jsp").forward(request, response);
