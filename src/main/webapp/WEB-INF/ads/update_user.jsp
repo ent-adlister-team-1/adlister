@@ -7,6 +7,7 @@
   </jsp:include>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/main-index-navbar.jsp"/>
 
 <form action = "/ads/update_user?id=${user.username}" method = "POST" class = "form-control">
 

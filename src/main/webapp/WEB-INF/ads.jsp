@@ -10,6 +10,7 @@
 
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/main-index-navbar.jsp"/>
 <h1>Advertisements</h1>
 
 <!-- Your existing code for rendering ads -->

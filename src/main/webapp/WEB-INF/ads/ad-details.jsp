@@ -6,6 +6,7 @@
     <title>Title</title>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/main-index-navbar.jsp"/>
 
 <div class="add-container">
     <div class="title">${ad.title}</div>

@@ -6,7 +6,8 @@
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="partials/navbar.jsp" />
+<%--    <jsp:include page="partials/navbar.jsp" />--%>
+<jsp:include page="/WEB-INF/partials/main-index-navbar.jsp"/>
     <div class="container">
         <h1>Please fill in your information.</h1>
         <form action="/register" method="post">
