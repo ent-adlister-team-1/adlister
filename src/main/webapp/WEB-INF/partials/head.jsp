@@ -21,5 +21,4 @@
         background-color: #470012;
         font-family: 'Playfair Display', serif;
     }
-
 </style>

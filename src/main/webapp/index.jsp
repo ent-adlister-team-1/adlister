@@ -9,58 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Your other head elements go here -->
-    <style>
-        body {
-            background-image: url('img/stained glass.webp');
-            background-size: cover;
-            background-repeat: no-repeat;
-            /*background-attachment: fixed;*/
-        }
-
-        .content {
-            text-align: center; /* Center the content horizontally */
-            padding: 100px; /* Add some padding for spacing */
-            color: white; /* Text color to make it visible on the image */
-        }
-
-        h1{
-            font-family: 'Pirata One', cursive;
-            color: #eeebe2;
-            font-size: 12em;
-        }
-
-        h2{
-            font-family: 'Playfair Display', serif;
-            color: #eeebe2;
-            font-size: 3em;
-        }
-
-        .navbar-default {
-             background-color: rgba(248, 248, 248, 0);
-             border-color: rgba(231, 231, 231, 0);
-        }
-
-        .navbar-default .navbar-nav>li>a {
-
-            color: #eeebe2;
-            font-size: 15px;
-        }
-        .navbar-default .navbar-brand {
-
-            color: #eeebe2;
-        }
-
-
-        .enter-btn{
-            margin: 50px;
-            display: flex;
-            justify-content: space-evenly;
-            color: #470012;
-        }
-
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/landing.css">
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/main-index-navbar.jsp"/>
@@ -82,7 +31,6 @@
         </div>
     </div>
 </div>
-
 </body>
 </html>
 
