@@ -1,24 +1,26 @@
 .cards {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .card {
-    border: solid 5px grey;
+    border: solid 1px grey;
     background-color: #470012;
     padding: 2rem;
     color: #fff;
-    width: 30rem;
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     flex-flow: wrap;
-    margin: 15px;
     justify-content: space-evenly;
+    flex: 1 0 calc(25% - 15px);
 }
 
 
-button {
-    border: #857e7e solid 2px;
+button, input {
+    border: #857e7e solid 1px;
     background-color: black;
     color: white;
     font-weight: bold;
-
 }
