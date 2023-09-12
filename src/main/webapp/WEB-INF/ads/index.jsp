@@ -28,7 +28,7 @@
         <input type="submit" value="Search">
     </form>
 
-<div class=".row-cols-md-2">
+<div class="cards">
 
 
     <div class="card-container">
