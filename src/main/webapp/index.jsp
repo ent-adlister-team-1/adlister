@@ -46,6 +46,19 @@
             color: #eeebe2;
             font-size: 15px;
         }
+        .navbar-default .navbar-brand {
+
+            color: #eeebe2;
+        }
+
+
+        .enter-btn{
+            margin: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            color: #470012;
+        }
+
 
     </style>
 </head>
@@ -56,9 +69,16 @@
         <div class="col">
             <h1>Shadow Trade</h1>
             <h2>Unmasking the Dark Side of Deals</h2>
+            <div class="row">
+                <div class="col enter-btn">
+                    <button> SIGN IN</button>
+                    <button> JOIN</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
 </body>
 </html>
 
