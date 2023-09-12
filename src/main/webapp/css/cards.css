@@ -1,0 +1,18 @@
+.card {
+    border: solid 5px grey;
+    background-color: #470012;
+    padding: 1rem;
+    margin: 2rem;
+    color: #fff;
+    width: 30rem;
+
+}
+
+
+button {
+    border: #857e7e solid 2px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+
+}

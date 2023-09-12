@@ -5,6 +5,8 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Viewing All The Ads"/>
     </jsp:include>
+    <title>Ads</title>
+    <link rel="stylesheet" type="text/css" href="/css/cards.css"/>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
@@ -26,18 +28,6 @@
         <input type="submit" value="Search">
     </form>
 
-<%--    <c:forEach var="ad" items="${ads}">--%>
-<%--        <div class="col-md-6">--%>
-<%--            <a href="ads/details?id=${ad.id}">${ad.title}</a>--%>
-<%--&lt;%&ndash;            <p>${ad.description}</p>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <div>&ndash;%&gt;--%>
-<%--                <form action="ads/delete?id=${ad.id}" method="POST">--%>
-<%--                    <button>Delete</button>--%>
-<%--                </form>--%>
-<%--                <a href="ads/update?id=${ad.id}"><button>Update</button></a>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </c:forEach>--%>
 <div class=".row-cols-md-2">
 
 
