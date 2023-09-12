@@ -26,18 +26,29 @@
         <input type="submit" value="Search">
     </form>
 
-    <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <a href="ads/details?id=${ad.id}">${ad.title}</a>
-            <p>${ad.description}</p>
-            <div>
-                <form action="ads/delete?id=${ad.id}" method="POST">
-                    <button>Delete</button>
-                </form>
-                <a href="ads/update?id=${ad.id}"><button>Update</button></a>
-            </div>
-        </div>
-    </c:forEach>
+<%--    <c:forEach var="ad" items="${ads}">--%>
+<%--        <div class="col-md-6">--%>
+<%--            <a href="ads/details?id=${ad.id}">${ad.title}</a>--%>
+<%--            <p>${ad.description}</p>--%>
+<%--            <div>--%>
+<%--                <form action="ads/delete?id=${ad.id}" method="POST">--%>
+<%--                    <button>Delete</button>--%>
+<%--                </form>--%>
+<%--                <a href="ads/update?id=${ad.id}"><button>Update</button></a>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </c:forEach>--%>
+
+    <div class="card-container">
+        <c:forEach var="card" items="${ads}">
+            <jsp:include page="/WEB-INF/partials/cardPartial.jsp">
+                <jsp:param name="ad.title" value="${ad.title}" />
+                <jsp:param name="ad.description" value="${ad.description}" />
+                <jsp:param name="ad.update" value="ad update"/>
+                <jsp:param name="ad.delete" value="ad delete"/>
+            </jsp:include>
+        </c:forEach>
+    </div>
 </div>
 
 </body>
