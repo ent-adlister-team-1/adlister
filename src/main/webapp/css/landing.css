@@ -21,11 +21,13 @@ h2{
 .navbar-default {
     background-color: rgba(248, 248, 248, 0);
     border-color: rgba(231, 231, 231, 0);
+
 }
 .navbar-default .navbar-nav>li>a {
 
     color: #eeebe2;
     font-size: 15px;
+
 }
 .navbar-default .navbar-brand {
 

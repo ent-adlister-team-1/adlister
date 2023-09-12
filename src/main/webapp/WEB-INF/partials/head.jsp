@@ -17,8 +17,8 @@
     }
 
     body{
-        color:#000;
-        background-color: #470012;
+        color:#7a002b;
+        background-color: #000;
         font-family: 'Playfair Display', serif;
     }
 
