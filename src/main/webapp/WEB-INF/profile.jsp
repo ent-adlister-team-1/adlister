@@ -17,6 +17,9 @@
             <aside>Username: ${sessionScope.user.username}</aside>
             <aside>Email: ${sessionScope.user.email}</aside>
             </div>
+            <form action="ads/update_user?id=${sessionScope.user.username}" method="GET">
+                <button>Update User Info</button>
+            </form>
         </div>
         <br>
         <div id="user-ads">

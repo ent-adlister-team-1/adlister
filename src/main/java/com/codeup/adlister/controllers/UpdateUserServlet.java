@@ -21,14 +21,12 @@ public class UpdateUserServlet extends HttpServlet {
         String username = request.getParameter("username");
         User user = DaoFactory.getUsersDao().findByUsername(username);
         request.setAttribute("user", user);
-        request.getRequestDispatcher("/WEB-INF/ads/update.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/ads/update_user.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String username = request.getParameter("username");
-        User user = DaoFactory.getUsersDao().findByUsername(username);
+        User user = (User) request.getSession().getAttribute("user");
         user.setEmail(request.getParameter("email"));
-
         DaoFactory.getUsersDao().updateUser(user);
         response.sendRedirect("/profile");
 

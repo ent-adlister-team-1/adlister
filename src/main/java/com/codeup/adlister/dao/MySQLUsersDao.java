@@ -67,12 +67,11 @@ public class MySQLUsersDao implements Users {
     }
 
     public void updateUser(User user) {
-//        System.out.println("Ad received by DAO:");
-//        System.out.println(ad);
         try {
             String updateUsers = "UPDATE users SET email = ? WHERE id = ?;";
             PreparedStatement stmt = connection.prepareStatement(updateUsers, Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1, user.getEmail());
+            System.out.println(user.getEmail());
             stmt.setLong(2, user.getId());
             stmt.executeUpdate();
         } catch (SQLException e) {
