@@ -20,8 +20,12 @@
             <h2>Unmasking the Dark Side of Deals</h2>
             <div class="row">
                 <div class="col enter-btn">
+                    <form action="/login" method="GET">
                     <button> SIGN IN</button>
+                    </form>
+                    <form action="/register" method="GET">
                     <button> JOIN</button>
+                    </form>
                 </div>
             </div>
         </div>

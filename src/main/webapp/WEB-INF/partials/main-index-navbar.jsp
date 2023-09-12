@@ -23,12 +23,7 @@
                 <li><a href="/logout">Logout</a></li>
             </c:if>
 
-<%--            User is NOT logged in--%>
-            <c:if test="${user == null}">
-                <c:if test="${!(pageContext.request.requestURI eq '/WEB-INF/login.jsp') && !(pageContext.request.requestURI eq '/WEB-INF/register.jsp')}">
-                    <li><a href="/login">Login or Join</a></li>
-                </c:if>
-            </c:if>
+<%--
 
 <%--                <li><a href="/login">Login or Join 1</a></li>--
 
