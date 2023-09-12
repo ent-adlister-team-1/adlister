@@ -16,7 +16,7 @@
     <form action="SearchServlet" method="post">
         <label>
             <select name="searchTerm">
-                <option value="#"></option>
+                <option value="#">Select a category</option>
                 <option value="All">All</option>
                 <option value="Exotic Pets">Exotic Pets</option>
                 <option value="Antique Artifacts">Antique Artifacts</option>
@@ -28,10 +28,9 @@
         <input type="submit" value="Search">
     </form>
 
-<div class="cards">
 
 
-    <div class="card-container">
+    <div class="container card-container">
             <jsp:include page="/WEB-INF/partials/cardPartial.jsp">
                 <jsp:param name="ad.title" value="${ad.title}" />
                 <jsp:param name="ad.description" value="${ad.description}" />
@@ -39,7 +38,6 @@
                 <jsp:param name="ad.delete" value="ad delete"/>
             </jsp:include>
     </div>
-</div>
 </div>
 </body>
 </html>
