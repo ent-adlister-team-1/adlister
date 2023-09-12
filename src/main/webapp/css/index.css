@@ -1,0 +1,17 @@
+:root{
+    /*font-family: 'Montserrat', sans-serif;*/
+    /*font-family: 'Pirata One', cursive;*/
+    /*font-family: 'Playfair Display', serif;*/
+    --grey-color: #857e7e;
+    --cream-color:#eeebe2;
+    --maroon-color:#470012;
+    --red-color: #7a002b;
+}
+
+body{
+    color:#000;
+    background-color: #470012;
+    font-family: 'Playfair Display', serif;
+}
+
+
