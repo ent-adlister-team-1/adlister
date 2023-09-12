@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 
+import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
@@ -14,15 +15,14 @@ public class MySQLUsersDao implements Users {
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUser(),
-                config.getPassword()
+                    config.getUrl(),
+                    config.getUser(),
+                    config.getPassword()
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
         }
     }
-
 
 
     @Override
@@ -55,15 +55,28 @@ public class MySQLUsersDao implements Users {
     }
 
     private User extractUser(ResultSet rs) throws SQLException {
-        if (! rs.next()) {
+        if (!rs.next()) {
             return null;
         }
         return new User(
-            rs.getLong("id"),
-            rs.getString("username"),
-            rs.getString("email"),
-            rs.getString("password")
+                rs.getLong("id"),
+                rs.getString("username"),
+                rs.getString("email"),
+                rs.getString("password")
         );
     }
 
+    public void updateUser(User user) {
+//        System.out.println("Ad received by DAO:");
+//        System.out.println(ad);
+        try {
+            String updateUsers = "UPDATE users SET email = ? WHERE id = ?;";
+            PreparedStatement stmt = connection.prepareStatement(updateUsers, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, user.getEmail());
+            stmt.setLong(2, user.getId());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating email.", e);
+        }
+    }
 }
