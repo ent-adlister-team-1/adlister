@@ -30,7 +30,7 @@
             <div class="card-container">
                 <c:forEach var="ad" items="${ads}">
                     <div class="card">
-                        <a href="ad-details.jsp?id=${ad.id}">${ad.title}</a>
+                        <a href="ads/details?id=${ad.id}">${ad.title}</a>
                         <p>${ad.description}</p>
                     </div>
                     <div>
