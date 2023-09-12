@@ -6,8 +6,8 @@
 }
 
 .card {
-    border: solid 1px grey;
-    background-color: #470012;
+    border: solid 1px #857e7e;
+    background-color: #1a1a1a;
     padding: 2rem;
     color: #fff;
     display: flex;
@@ -20,7 +20,8 @@
 
 button, input {
     border: #857e7e solid 1px;
-    background-color: black;
+    background-color: #1a1a1a;
     color: white;
     font-weight: bold;
 }
+
