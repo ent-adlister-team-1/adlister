@@ -32,14 +32,12 @@
 
 
     <div class="card-container">
-        <c:forEach var="card" items="${ads}">
             <jsp:include page="/WEB-INF/partials/cardPartial.jsp">
                 <jsp:param name="ad.title" value="${ad.title}" />
                 <jsp:param name="ad.description" value="${ad.description}" />
                 <jsp:param name="ad.update" value="ad update"/>
                 <jsp:param name="ad.delete" value="ad delete"/>
             </jsp:include>
-        </c:forEach>
     </div>
 </div>
 </div>
