@@ -19,7 +19,7 @@
     body{
         color:#eeebe2 ;
         background-color: #470012;
-        font-family: 'Playfair Display', serif;;
+        font-family: 'Playfair Display', serif;
     }
 
 </style>
