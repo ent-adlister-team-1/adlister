@@ -1,16 +1,17 @@
 .cards {
     display: inline-block;
-    margin: 3rem;
-    justify-content: space-around;
 }
 
 .card {
     border: solid 5px grey;
     background-color: #470012;
-    padding: 1rem;
-    margin: 2rem;
+    padding: 2rem;
     color: #fff;
     width: 30rem;
+    display: inline-flex;
+    flex-flow: wrap;
+    margin: 15px;
+    justify-content: space-evenly;
 }
 
 
