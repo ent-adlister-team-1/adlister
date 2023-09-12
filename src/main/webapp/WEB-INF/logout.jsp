@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/login-only-navbar.jsp" />
+<jsp:include page="/WEB-INF/partials/main-index-navbar.jsp" />
 
 <%--<div action="/logout" method="POST">--%>
 <%--    <h1>You've been logged out!</h1>--%>

@@ -63,7 +63,7 @@
     </style>
 </head>
 <body>
-    <jsp:include page="/WEB-INF/partials/login-only-navbar.jsp"/>
+    <jsp:include page="/WEB-INF/partials/main-index-navbar.jsp"/>
 <div class="content">
     <div class="row">
         <div class="col">

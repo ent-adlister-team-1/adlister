@@ -7,6 +7,7 @@
     </jsp:include>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/main-index-navbar.jsp"/>
 <%--<c: var="ad" items="${ad}">--%>
 <form action = "/ads/update?id=${ad.id}" method = "POST" class = "form-control">
 <%--    <label for = "category">Category</label>--%>

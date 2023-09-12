@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/css/cards.css"/>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
+<jsp:include page="/WEB-INF/partials/main-index-navbar.jsp"/>
 
 <div class="container">
     <h1>Here Are all the ads!</h1>
