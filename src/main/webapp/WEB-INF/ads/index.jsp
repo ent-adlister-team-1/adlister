@@ -29,8 +29,8 @@
 <%--    <c:forEach var="ad" items="${ads}">--%>
 <%--        <div class="col-md-6">--%>
 <%--            <a href="ads/details?id=${ad.id}">${ad.title}</a>--%>
-<%--            <p>${ad.description}</p>--%>
-<%--            <div>--%>
+<%--&lt;%&ndash;            <p>${ad.description}</p>&ndash;%&gt;--%>
+<%--&lt;%&ndash;            <div>&ndash;%&gt;--%>
 <%--                <form action="ads/delete?id=${ad.id}" method="POST">--%>
 <%--                    <button>Delete</button>--%>
 <%--                </form>--%>
