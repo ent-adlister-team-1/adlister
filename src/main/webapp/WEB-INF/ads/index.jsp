@@ -38,6 +38,8 @@
 <%--            </div>--%>
 <%--        </div>--%>
 <%--    </c:forEach>--%>
+<div class=".row-cols-md-2">
+
 
     <div class="card-container">
         <c:forEach var="card" items="${ads}">
@@ -50,6 +52,6 @@
         </c:forEach>
     </div>
 </div>
-
+</div>
 </body>
 </html>
