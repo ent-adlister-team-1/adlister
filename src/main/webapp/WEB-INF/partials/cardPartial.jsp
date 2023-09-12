@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
-<div class="cards">
+<div class="cards d-inline-flex">
     <div class="card-body" style="width: 20rem">
         <c:forEach var="ad" items="${ads}">
             <div class="card">
