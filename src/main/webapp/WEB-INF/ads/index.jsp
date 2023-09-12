@@ -6,6 +6,7 @@
         <jsp:param name="title" value="Viewing All The Ads"/>
     </jsp:include>
     <title>Ads</title>
+    <link rel="stylesheet" type="text/css" href="/css/cards.css"/>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>

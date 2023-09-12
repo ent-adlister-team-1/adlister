@@ -6,6 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Advertisements</title> <!-- Set your title here -->
+  <link rel="stylesheet" type="text/css" href="css/cards.css"/>
 
 </head>
 <body>
