@@ -6,8 +6,11 @@
         <c:forEach var="ad" items="${ads}">
             <h5 class="card-title">${ad.title}</h5>
             <p class="card-text">${ad.description}</p>
-            <a href="/ads/update" class="btn">Update</a>
-            <a href="/ads/delete" class="btn">Delete</a>
+            <c:if test="${user != null}">
+                <a href="/ads/update" class="btn">Update</a>
+                <a href="/ads/delete" class="btn">Delete</a>
+            </c:if>
+
         </c:forEach>
 
     </div>
