@@ -26,3 +26,12 @@
 aside{
     margin-bottom: 2em;
 }
+
+h1{
+    font-family: 'Pirata One', cursive;
+}
+
+.btn{
+    background-color: #7a002b;
+    color:#eeebe2 ;
+}
