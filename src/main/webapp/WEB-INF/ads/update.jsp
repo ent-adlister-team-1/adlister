@@ -20,15 +20,15 @@
         <form action="/ads/update?id=${ad.id}" method="POST" class="form-control">
             <%--    <label for = "category">Category</label>--%>
             <%--    <input type="text" id = "category" name = "category" value = "category" placeholder = "${ad.category}">--%>
-            <label for="title">Title:</label>
+            <label for="title">Enter New Title:</label>
             <input type="text" id="title" name="title" value="${ad.title}">
-            <label for="price">Price:</label>
+            <label for="price">Enter New Price:</label>
             <input type="text" id="price" name="price" value="${ad.price}">
-            <label for="description">Description:</label>
+            <label for="description">Enter New Description:</label>
             <input type="text" id="description" name="description" value="${ad.description}">
-            <label for="contact">Contact:</label>
+            <label for="contact">Enter New Contact:</label>
             <input type="text" id="contact" name="contact" value="${ad.contact}">
-            <label for="location">Location:</label>
+            <label for="location">Enter New Location:</label>
             <input type="text" id="location" name="location" value="${ad.location}">
             <button><input type="submit"></button>
         </form>
