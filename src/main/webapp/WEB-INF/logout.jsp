@@ -32,7 +32,7 @@
     <div class="row">
         <div class="col">
             <h1>You've been logged out!</h1>
-            <%--            <img src="" >--%> <!-- maybe an image here-->
+            <img src="/css/img/theguillotine.gif">
         </div>
     </div>
 </div>
