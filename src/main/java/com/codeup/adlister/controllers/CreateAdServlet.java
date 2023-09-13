@@ -29,28 +29,69 @@ public class CreateAdServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User loggedInUser = (User) request.getSession().getAttribute("user");
         String category = String.valueOf(DaoFactory.getCategoriesDao().getCategoryById(request.getParameter("category_id")));
-//        return new Ad(
-//                rs.getLong("id"),
-//                rs.getLong("user_id"),
-//                rs.getString("title"),
-//                rs.getString("description"),
-//                rs.getString("contact"),
-//                rs.getString("location"),
-//                rs.getString("category"),
-//                rs.getLong("category_id"),
-//                rs.getDouble("price")
-//        );
+        String title = request.getParameter("title");
+        String description = request.getParameter("description");
+        String contact = request.getParameter("contact");
+        String location = request.getParameter("location");
+        double price;
+        try {
+            price = Double.parseDouble(request.getParameter("price"));
+        }catch(Exception e) {
+            price = 0.00;
+        }
+        if(request.getParameter("price") == null) {
+            price = 0.00;
+        }
+        System.out.println(price);
         Ad ad = new Ad(
             loggedInUser.getId(),
             request.getParameter("title"),
             request.getParameter("description"),
             request.getParameter("contact"),
             request.getParameter("location"),
-            Double.parseDouble(request.getParameter("price")),
+            price,
             category
         );
+        boolean inputHasErrors = title.isEmpty()
+                || description.isEmpty()
+                || contact.isEmpty()
+                || location.isEmpty();
 
-        System.out.println(ad);
+        System.out.println(inputHasErrors);
+
+        if(title.isEmpty()) {
+            request.getSession().setAttribute("userTitleEmpty", true);
+        }
+        else if (!title.isEmpty()){
+            request.getSession().setAttribute("userTitleEmpty", false);
+        }
+
+        if(description.isEmpty()) {
+            request.getSession().setAttribute("userDescEmpty", true);
+        }
+        else if (!description.isEmpty()) {
+            request.getSession().setAttribute("userDescEmpty", false);
+        }
+
+        if(contact.isEmpty()) {
+            request.getSession().setAttribute("userContactEmpty", true);
+        }
+        else if (!contact.isEmpty()) {
+            request.getSession().setAttribute("userContactEmpty", false);
+        }
+
+        if(location.isEmpty()) {
+            request.getSession().setAttribute("userLocEmpty", true);
+        }
+        else if (!location.isEmpty()) {
+            request.getSession().setAttribute("userLocEmpty", false);
+        }
+
+        if (inputHasErrors) {
+            response.sendRedirect("/ads/create");
+            return;
+        }
+
         DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/ads");
     }
