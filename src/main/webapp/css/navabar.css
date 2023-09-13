@@ -22,3 +22,7 @@
     color: rgba(255, 255, 255);
     text-shadow: #FFF 1px 0 10px;
 }
+
+aside{
+    margin-bottom: 2em;
+}
