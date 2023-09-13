@@ -7,6 +7,7 @@
     </jsp:include>
     <title>Profile</title>
     <link rel="stylesheet" type="text/css" href="/css/cards.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/button.css"/>
 </head>
 <body>
 <%--    <jsp:include page="/WEB-INF/partials/navbar.jsp" />--%>
