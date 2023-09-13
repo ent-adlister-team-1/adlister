@@ -24,15 +24,29 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
-
+        System.out.println(password);
+        System.out.println(passwordConfirmation);
         // validate input
         boolean inputHasErrors = username.isEmpty()
                 || email.isEmpty()
                 || password.isEmpty()
                 || (!password.equals(passwordConfirmation));
+        if(username.isEmpty()) {
+            boolean userNameEmpty = true;
+            request.getSession().setAttribute("userNameEmpty", userNameEmpty);
+        }
+        if(email.isEmpty()) {
+            boolean userEmailEmpty = true;
+            request.getSession().setAttribute("userEmailEmpty", userEmailEmpty);
+        }
+        if(password.isEmpty()) {
+            boolean userPasswordEmpty = true;
+            request.getSession().setAttribute("userPasswordEmpty", userPasswordEmpty);
+        }
 
+        System.out.println(inputHasErrors);
         if (inputHasErrors) {
-            request.getRequestDispatcher("/register.jsp");
+            response.sendRedirect("/register");
             return;
         }
 

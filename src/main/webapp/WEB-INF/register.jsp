@@ -12,6 +12,9 @@
         <h1>Please fill in your information.</h1>
         <form action="/register" method="post">
             <div class="form-group">
+                <c:if test = "${userNameEmpty} = true">
+                    <p>Username cannot be left empty. Please enter a username.</p>
+                </c:if>
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
             </div>
