@@ -6,10 +6,7 @@
 }
 
 .card {
-    border: solid 1px #857e7e;
-    background-color: #1a1a1a;
     padding: 2rem;
-    color: #fff;
     display: flex;
     flex-direction: column;
     flex-flow: wrap;
@@ -25,3 +22,45 @@ button, input {
     font-weight: bold;
 }
 
+.card {
+    position: relative;
+    color: #ceb7b7;
+    width: 190px;
+    height: 254px;
+    background: rgb(122, 0, 43);
+    background: linear-gradient(137deg, rgb(71, 0, 18) 0%, rgb(26, 26, 26) 100%);
+    transition: 0.3s ease;
+    border-radius: 30px;
+    filter: drop-shadow(0px 0px 30px rgb(71, 0, 18));
+}
+
+.card::after {
+    /*content: '';*/
+    background-color: #181818;
+    position: absolute;
+    z-index: 1;
+    transition: 0.3s ease;
+    height: 98%;
+    width: 98%;
+    top: 1%;
+    left: 1%;
+    border-radius: 28px;
+}
+
+.card:hover {
+    filter: drop-shadow(0px 0px 30px rgb(209, 38, 38));
+}
+
+a:link {
+    color: #676767;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: #b0b0b0;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active {
+    color: #fdfdfd;
+    background-color: transparent;
