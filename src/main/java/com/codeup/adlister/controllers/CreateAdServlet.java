@@ -29,18 +29,27 @@ public class CreateAdServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User loggedInUser = (User) request.getSession().getAttribute("user");
         String category = String.valueOf(DaoFactory.getCategoriesDao().getCategoryById(request.getParameter("category_id")));
-        String title = request.getParameter("username");
-        String description = request.getParameter("email");
-        String contact = request.getParameter("password");
+        String title = request.getParameter("title");
+        String description = request.getParameter("description");
+        String contact = request.getParameter("contact");
         String location = request.getParameter("location");
-        double price = Double.parseDouble(request.getParameter("price"));
+        double price;
+        try {
+            price = Double.parseDouble(request.getParameter("price"));
+        }catch(Exception e) {
+            price = 0.00;
+        }
+        if(request.getParameter("price") == null) {
+            price = 0.00;
+        }
+        System.out.println(price);
         Ad ad = new Ad(
             loggedInUser.getId(),
             request.getParameter("title"),
             request.getParameter("description"),
             request.getParameter("contact"),
             request.getParameter("location"),
-            Double.parseDouble(request.getParameter("price")),
+            price,
             category
         );
         boolean inputHasErrors = title.isEmpty()
@@ -79,11 +88,10 @@ public class CreateAdServlet extends HttpServlet {
         }
 
         if (inputHasErrors) {
-            response.sendRedirect("ads/create");
+            response.sendRedirect("/ads/create");
             return;
         }
 
-        System.out.println(inputHasErrors);
         DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/ads");
     }
