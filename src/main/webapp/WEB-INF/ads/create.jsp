@@ -8,6 +8,9 @@
     </jsp:include>
     <link rel="stylesheet" href="../../css/navabar.css">
     <link rel="stylesheet" href="../../css/button.css">
+    <link rel="stylesheet" type="text/css" href="/css/update-form.css"/>
+
+
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/main-index-navbar.jsp" />
@@ -56,7 +59,7 @@
                 <label for="price">Price</label>
                 <input id="price" name="price" class="form-control" type="text">
             </div>
-            <input type="submit" class="button btn btn-block">
+           <button> <input type="submit"></button>
         </form>
     </div>
 </body>
