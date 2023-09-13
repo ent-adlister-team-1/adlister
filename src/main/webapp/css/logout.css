@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+h1 {
+    margin-bottom: 8rem;
+    margin-left: 22rem;
+}
+img{
+    height: 60rem;
+}
