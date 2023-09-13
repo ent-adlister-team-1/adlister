@@ -14,6 +14,7 @@
     <div class="price">${ad.price}</div>
     <div class="location">${ad.location}</div>
     <div class="contact">${ad.contact}</div>
+
 </div>
 
 </body>

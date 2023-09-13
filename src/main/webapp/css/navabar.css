@@ -18,3 +18,7 @@
 .container {
     margin-top: 4em;
 }
+.error {
+    color: rgba(255, 255, 255);
+    text-shadow: #FFF 1px 0 10px;
+}
