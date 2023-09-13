@@ -17,7 +17,9 @@
     aspect-ratio: 1/1;
 }
 
-
+.profile-ads-cards {
+    height: 100px;
+}
 
 a:link {
     color: #ffffff;
@@ -53,10 +55,11 @@ h5 {
     font-weight: 500;
 }
 
-#ad_details {
+.ad_details {
     font-size: 1.50em;
     font-weight: 350;
     text-align: center;
+    width: 100%;
 }
 
 .flow > * + * {
