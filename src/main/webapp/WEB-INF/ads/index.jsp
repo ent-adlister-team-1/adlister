@@ -7,6 +7,7 @@
     </jsp:include>
     <title>Ads</title>
     <link rel="stylesheet" type="text/css" href="/css/cards.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/button.css"/>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/main-index-navbar.jsp"/>
@@ -25,7 +26,7 @@
                 <option value="Forbidden Literature">Forbidden Literature</option>
             </select>
         </label>
-        <input type="submit" value="Search">
+        <button>Search</button>
     </form>
 
 
