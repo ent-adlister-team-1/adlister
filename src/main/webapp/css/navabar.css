@@ -1,0 +1,16 @@
+
+.navbar-default {
+    background-color: rgba(248, 248, 248, 0);
+    border-color: rgba(231, 231, 231, 0);
+}
+
+.navbar {
+    /* position: relative; */
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}

@@ -1,6 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<link rel="stylesheet" href="../../css/navabar.css">
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
+    <div class=" navburr container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand" href="/">Shadow Trade</a>
