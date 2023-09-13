@@ -31,18 +31,25 @@ public class RegisterServlet extends HttpServlet {
                 || password.isEmpty()
                 || (!password.equals(passwordConfirmation));
         if(username.isEmpty()) {
-            boolean userNameEmpty = true;
-            request.getSession().setAttribute("userNameEmpty", userNameEmpty);
+            request.getSession().setAttribute("userNameEmpty", true);
         }
-        if(email.isEmpty()) {
-            boolean userEmailEmpty = true;
-            request.getSession().setAttribute("userEmailEmpty", userEmailEmpty);
-        }
-        if(password.isEmpty()) {
-            boolean userPasswordEmpty = true;
-            request.getSession().setAttribute("userPasswordEmpty", userPasswordEmpty);
+        else if (!username.isEmpty()){
+            request.getSession().setAttribute("userNameEmpty", false);
         }
 
+        if(email.isEmpty()) {
+            request.getSession().setAttribute("userEmailEmpty", true);
+        }
+        else if (!email.isEmpty()) {
+            request.getSession().setAttribute("userEmailEmpty", false);
+        }
+
+        if(password.isEmpty()) {
+            request.getSession().setAttribute("userPasswordEmpty", true);
+        }
+        else if (!password.isEmpty()) {
+            request.getSession().setAttribute("userPasswordEmpty", false);
+        }
         System.out.println(inputHasErrors);
         if (inputHasErrors) {
             response.sendRedirect("/register");
