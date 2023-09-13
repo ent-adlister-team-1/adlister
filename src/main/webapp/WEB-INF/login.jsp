@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-<%--<jsp:include page="/WEB-INF/partials/main-index-navbar.jsp" />--%>
-    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<jsp:include page="/WEB-INF/partials/main-index-navbar.jsp" />
+
     <section>
 <span></span> <span></span> <span></span> <span></span>
     <span></span> <span></span> <span></span> <span></span> <span></span>
