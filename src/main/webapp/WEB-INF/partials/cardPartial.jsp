@@ -6,8 +6,8 @@
         <div class="cards">
             <c:forEach var="ad" items="${ads}">
                 <div class="card ">
-                    <a href="ads/details?id=${ad.id}"><h5>${ad.title}</h5></a>
-                    <p class="card-text">${ad.description}</p>
+                    <h5>${ad.title}</h5>
+                    <a href="ads/details?id=${ad.id}">Show details</a>
                     <c:if test="${user != null}">
                         <a href="ads/update?id=${ad.id}">
                             <button>Update</button>
