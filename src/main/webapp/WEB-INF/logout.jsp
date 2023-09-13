@@ -11,7 +11,7 @@
 <div class="container">
     <div class="row">
         <h1>You've been logged out!</h1>
-        <img src="/css/img/theguillotine.gif">
+        <img src="../css/img/saint_steve.jpg">
     </div>
 </div>
 
