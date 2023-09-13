@@ -18,11 +18,14 @@ h2{
     color: #eeebe2;
     font-size: 3em;
 }
+
+/*this is for the index navbar*/
 .navbar-default {
     background-color: rgba(248, 248, 248, 0);
     border-color: rgba(231, 231, 231, 0);
 
 }
+/*this is for the words*/
 .navbar-default .navbar-nav>li>a {
 
     color: #eeebe2;
