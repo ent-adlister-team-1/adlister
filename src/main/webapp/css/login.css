@@ -5,7 +5,9 @@
     background-color: #7a002b;
     color: #eeebe2;
 }
-
+.btn-primary{
+    border-color: rgba(122, 0, 43, 0);
+}
 html,
 body {
     height: 100%;
