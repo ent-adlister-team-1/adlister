@@ -12,6 +12,8 @@
     flex-flow: wrap;
     justify-content: space-evenly;
     flex: 1 0 calc(25% - 15px);
+    height: 45rem;
+    max-width: 35rem;
 }
 
 
@@ -31,9 +33,9 @@ h5 {
     color: #eceff1;
 }
 
-.cards {
-    position: relative;
-}
+/*.cards {*/
+/*    position: relative;*/
+/*}*/
 
 .card {
     --flow-space: 0.5em;
