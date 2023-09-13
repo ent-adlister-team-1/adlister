@@ -4,10 +4,10 @@
 <div class="container">
         <div class="cards" class="row">
             <c:forEach var="ad" items="${ads}">
-                <div class="col-md-3">
+                <div class="col-lg-4">
                     <div class="card">
                         <h5>${ad.title}</h5>
-                        <a id="ad_details" href="ads/details?id=${ad.id}">Show details</a>
+                        <a class="ad_details" href="ads/details?id=${ad.id}">Show details</a>
                         <c:if test="${user != null}">
                             <a href="ads/update?id=${ad.id}">
                                 <button>Update</button>
