@@ -10,6 +10,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/landing.css">
+    <link rel="stylesheet" type="text/css" href="css/button.css">
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/main-index-navbar.jsp"/>
