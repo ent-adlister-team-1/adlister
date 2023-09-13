@@ -1,0 +1,102 @@
+/*.update-form {*/
+/*    margin: 20px 15px;*/
+/*    border: 5px solid #FFFFFF;*/
+/*    background-color: #980b0b;*/
+/*    color: #FFFFFF;*/
+/*    height: fit-content;*/
+/*    width: min-content;*/
+/*    display: inline-blocgit k;*/
+/*    padding: 20px 15px;*/
+/*    text-align: left;*/
+/*}*/
+
+/*input {*/
+/*    font-size: small;*/
+/*}*/
+
+/*label {*/
+/*    font-size: medium;*/
+/*    font-weight: bold;*/
+/*}*/
+
+.update-form {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 400px;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    box-sizing: initial;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+
+}
+
+.update-form .user-box {
+    position: relative;
+}
+
+.update-form .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.update-form .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.update-form .user-box input:focus ~ label,
+.update-form .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #bdb8b8;
+    font-size: 12px;
+}
+
+/*.update-form .update-button {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    padding: 10px 20px;*/
+/*    color: #ffffff;*/
+/*    font-size: 16px;*/
+/*    text-decoration: none;*/
+/*    text-transform: uppercase;*/
+/*    overflow: hidden;*/
+/*    transition: .5s;*/
+/*    margin-top: 40px;*/
+/*    letter-spacing: 4px*/
+/*}*/
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #000000;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    margin: 100px 0;
+}
