@@ -22,45 +22,92 @@ button, input {
     font-weight: bold;
 }
 
-.card {
-    position: relative;
-    color: #ceb7b7;
-    width: 190px;
-    height: 254px;
-    background: rgb(122, 0, 43);
-    background: linear-gradient(137deg, rgb(71, 0, 18) 0%, rgb(26, 26, 26) 100%);
-    transition: 0.3s ease;
-    border-radius: 30px;
-    filter: drop-shadow(0px 0px 30px rgb(71, 0, 18));
+
+a:link {
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration: none;
 }
 
-.card::after {
-    /*content: '';*/
-    background-color: #181818;
-    position: absolute;
-    z-index: 1;
-    transition: 0.3s ease;
-    height: 98%;
-    width: 98%;
-    top: 1%;
-    left: 1%;
-    border-radius: 28px;
+
+h5 {
+    font-weight: 600;
+    font-size: 2.25em;
+    margin-bottom: 0.75em;
+    text-align: center;
+    color: #eceff1;
+}
+
+.cards {
+    position: relative;
+}
+
+.card {
+    --flow-space: 0.5em;
+    --hsl: var(--hue), var(--saturation), var(--lightness);
+    flex: 1 1 14rem;
+    padding: 1.5em 2em;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    align-items: start;
+    gap: 1.25em;
+    color: #eceff1;
+    background-color: #2b2b2b;
+    border: 1px solid #eceff133;
+    border-radius: 15px;
+}
+
+.card:nth-child(1) {
+    --hue: 165;
+    --saturation: 82.26%;
+    --lightness: 51.37%;
+}
+
+.card__bullets {
+    line-height: 1.4;
+}
+
+.card__heading {
+    font-size: 1.05em;
+    font-weight: 600;
+}
+
+.card__price {
+    font-size: 1.75em;
+    font-weight: 700;
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space, 1.25em);
+}
+
+.cta {
+    display: block;
+    align-self: end;
+    margin: 1em 0 0.5em 0;
+    text-align: center;
+    text-decoration: none;
+    color: #5e5e5e;
+    background-color: transparent;
+    outline: 1px solid #980b0b;
+    padding: 0.7em;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .card:hover {
-    filter: drop-shadow(0px 0px 30px rgb(209, 38, 38));
+    --lightness: 80%;
+    background: #490000;
+    color: #ffffff;
+    outline: 1px solid rgb(87, 0, 0);
+    box-shadow: inset 0 0 80px #570000, inset 20px 0 80px rgb(126, 0, 22),
+    inset -20px 0 80px #570000, inset 20px 0 300px #7e0016, inset -20px 0 300px #570000,
+    0 0 50px #570000, -10px 0 80px #7e0016, 10px 0 80px #570000;
+    transition: all ease-in-out 0.3s;
 }
 
-a:link {
-    color: #676767;
-    background-color: transparent;
-    text-decoration: none;
+.card:hover > .cta {
+    outline: none;
+    background-color: #0d0d0d;
 }
-a:visited {
-    color: #b0b0b0;
-    background-color: transparent;
-    text-decoration: none;
-}
-a:active {
-    color: #fdfdfd;
-    background-color: transparent;
