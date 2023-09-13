@@ -19,20 +19,48 @@ public class RegisterServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
-
+        System.out.println(password);
+        System.out.println(passwordConfirmation);
         // validate input
         boolean inputHasErrors = username.isEmpty()
                 || email.isEmpty()
                 || password.isEmpty()
                 || (!password.equals(passwordConfirmation));
 
+        if(username.isEmpty()) {
+            request.getSession().setAttribute("userNameEmpty", true);
+        }
+        else if (!username.isEmpty()){
+            request.getSession().setAttribute("userNameEmpty", false);
+        }
+
+        if(email.isEmpty()) {
+            request.getSession().setAttribute("userEmailEmpty", true);
+        }
+        else if (!email.isEmpty()) {
+            request.getSession().setAttribute("userEmailEmpty", false);
+        }
+
+        if(password.isEmpty()) {
+            request.getSession().setAttribute("userPasswordEmpty", true);
+        }
+        else if (!password.isEmpty()) {
+            request.getSession().setAttribute("userPasswordEmpty", false);
+        }
+
+        if(!password.equals(passwordConfirmation)) {
+            request.getSession().setAttribute("passwordsNotEqual", true);
+        }
+        else if (password.equals(passwordConfirmation)) {
+            request.getSession().setAttribute("passwordsNotEqual", false);
+        }
+
         if (inputHasErrors) {
-            request.getRequestDispatcher("/register.jsp");
+            response.sendRedirect("/register");
             return;
         }
 
