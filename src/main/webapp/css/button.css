@@ -26,3 +26,9 @@ button:active {
     transform: translateY(10px);
     transition: 100ms;
 }
+
+input {
+    background: none;
+    border: none;
+    width: inherit;
+}
