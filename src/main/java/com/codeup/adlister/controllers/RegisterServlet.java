@@ -30,6 +30,7 @@ public class RegisterServlet extends HttpServlet {
                 || email.isEmpty()
                 || password.isEmpty()
                 || (!password.equals(passwordConfirmation));
+
         if(username.isEmpty()) {
             request.getSession().setAttribute("userNameEmpty", true);
         }
@@ -50,7 +51,14 @@ public class RegisterServlet extends HttpServlet {
         else if (!password.isEmpty()) {
             request.getSession().setAttribute("userPasswordEmpty", false);
         }
-        System.out.println(inputHasErrors);
+
+        if(!password.equals(passwordConfirmation)) {
+            request.getSession().setAttribute("passwordsNotEqual", true);
+        }
+        else if (password.equals(passwordConfirmation)) {
+            request.getSession().setAttribute("passwordsNotEqual", false);
+        }
+
         if (inputHasErrors) {
             response.sendRedirect("/register");
             return;
